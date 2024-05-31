@@ -6,7 +6,7 @@ import {
     getProductById,
     related,
     updateProduct,
-} from "../controllers/product";
+} from "../controllers/product.js";
 
 const router = Router();
 router.get("/products", getAll);

@@ -1,6 +1,6 @@
 import Order from "../models/order.js";
 import { StatusCodes } from "http-status-codes";
-import Cart from "../models/cart";
+import Cart from "../models/cart.js";
 
 export const createOrder = async (req, res) => {
     try {

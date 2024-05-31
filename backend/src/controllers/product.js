@@ -1,8 +1,8 @@
 import { StatusCodes } from "http-status-codes";
-import Product from "../models/product";
-import Category from "../models/category";
-import Attribute from "../models/attribute";
-import ValueAttribute from "../models/attribute";
+import Product from "../models/product.js";
+import Category from "../models/category.js";
+import Attribute from "../models/attribute.js";
+import ValueAttribute from "../models/attribute.js";
 
 export const create = async (req, res) => {
     try {
