@@ -5,8 +5,7 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "dev": "vite",
-        "vercel-build": "node ./src/app.js"
+        "dev": "vite"
     },
     "engines": {
         "node": "20.x"
