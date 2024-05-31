@@ -1,0 +1,303 @@
+@use "_mixin" as m;
+$font-poppins: "Poppins", sans-serif;
+
+body {
+    font-family: $font-poppins;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1268px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header {
+    &-inner {
+        padding: 28px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include m.breakpoint(lg) {
+        }
+    }
+    &-inner > * {
+        flex: 1;
+    }
+    &-items {
+        display: none;
+
+        @include m.breakpoint(lg) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    &-items > * {
+        margin-left: 37px;
+    }
+}
+.button-mobile {
+    text-align: right;
+    display: inline-block;
+    @include m.breakpoint(lg) {
+        display: none;
+    }
+}
+.main-menu {
+    display: none;
+    @include m.breakpoint(lg) {
+        display: block;
+    }
+    &__list {
+        display: block;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-weight: 500;
+        @include m.breakpoint(lg) {
+            display: flex;
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        display: block;
+        padding: 10px 35px;
+        text-decoration: none;
+        color: #000;
+        transition: ease-in-out 0.3s;
+    }
+    &__link:hover {
+        background: #000;
+        color: #fff;
+    }
+}
+
+// BANNER
+.banner {
+    margin-bottom: 17px;
+    &__img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+}
+
+.checkout {
+    &-title {
+        margin: 50px 12px;
+        text-align: center;
+        font-size: 36px;
+
+        @include m.breakpoint(lg) {
+            margin-top: 100px;
+            text-align: left;
+        }
+    }
+    &-around {
+        @include m.grid(1, 30px);
+        justify-items: center;
+        margin: 0 12px;
+        @include m.breakpoint(lg) {
+            @include m.grid(2, 340px);
+        }
+    }
+    &-form {
+        width: 80%;
+        @include m.breakpoint(lg) {
+            width: 100%;
+        }
+        &__name {
+            @include m.grid(2, 48px);
+        }
+
+        &__label {
+            font-weight: 500;
+            display: block;
+        }
+
+        &__input {
+            width: 100%;
+            padding: 10px;
+            height: 40px;
+            border: 1px solid #9f9f9f;
+            border-radius: 5px;
+            margin: 28px 0;
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &__item {
+            > select {
+                width: 105%;
+                padding: 10px;
+                height: 62px;
+                border: 1px solid #9f9f9f;
+                border-radius: 5px;
+                margin: 28px 0;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    &-detail {
+        width: 80%;
+        @include m.breakpoint(lg) {
+            width: 100%;
+        }
+        &__header {
+            @include m.grid(2, 48px);
+            > ul:first-child {
+                text-align: left;
+            }
+            > ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: right;
+
+                li:first-child {
+                    font-weight: 500;
+                    margin-bottom: 12px;
+                    font-size: 24px;
+                }
+
+                li {
+                    margin: 12px 0;
+                }
+
+                .total-price {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #b88e2f;
+                }
+            }
+        }
+
+        &__radio {
+            margin: 28px 12px 0;
+        }
+        &__body {
+            > p:first-of-type {
+                color: #9f9f9f;
+            }
+
+            > p {
+                margin: 28px 0 0 0;
+                text-align: justify;
+            }
+        }
+        &__button {
+            width: 80%;
+            @include m.breakpoint(lg) {
+                width: 318px;
+            }
+            display: block;
+            margin: 28px auto;
+            height: 64px;
+            background: none;
+            border: 1px solid #000;
+            border-radius: 15px;
+            font-size: 20px;
+        }
+    }
+}
+
+hr {
+    border: 0.5px solid #9f9f9f;
+    margin-top: 28px;
+}
+
+.service-list {
+    background: #faf3ea;
+    padding: 10% 15px 10% 15px;
+    margin-top: 100px;
+    @include m.grid(2, 30px);
+    @include m.breakpoint(lg) {
+        @include m.grid(4, 30px);
+        padding: 107px 5% 93px 11%;
+    }
+    .service-item {
+        display: block;
+        text-align: center;
+        @include m.breakpoint(sm) {
+            display: grid;
+            grid-template-columns: 60px auto;
+            grid-gap: 10px;
+            text-align: left;
+        }
+    }
+    .service__name {
+        font-size: 25px;
+        color: #242424;
+        margin: 0;
+    }
+    .service__description {
+        color: #898989;
+        margin-top: 10px;
+    }
+}
+
+.footer {
+    padding: 39px 0;
+    &-list {
+        @include m.grid(1, 30px);
+
+        @include m.breakpoint(lg) {
+            @include m.grid(3, 30px);
+        }
+    }
+    &__address {
+        color: #9f9f9f;
+    }
+    &-nav {
+        @include m.grid(2, 30px);
+    }
+    &__title {
+        font-size: 16px;
+        color: #9f9f9f;
+        font-weight: normal;
+        margin-bottom: 59px;
+    }
+    &-menu-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &-menu-item {
+        margin-bottom: 20px;
+    }
+    &-menu-link {
+        text-decoration: none;
+        color: #000;
+    }
+}
+.newsletter {
+    &__input {
+        border: 1px solid transparent;
+        border-bottom: 1px solid #000;
+        padding: 5px 10px;
+        &:focus {
+            outline: none;
+        }
+    }
+    &__btn {
+        border: 1px solid transparent;
+        border-bottom: 1px solid #000;
+        padding: 5px 10px;
+        background: none;
+        cursor: pointer;
+    }
+}
+
+.section-blog-heading {
+    margin-bottom: 66px;
+}

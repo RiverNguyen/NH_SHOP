@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="shortcut icon"
+            href="../assets/images/logo.svg"
+            type="image/x-icon"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../scss/pay.scss" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>Pay</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <div class="header-inner">
+                    <a href="../index.html" class="header__logo">
+                        <img src="../assets/logo-1.svg" alt="" />
+                    </a>
+                    <div class="button-mobile"><button>=</button></div>
+                    <nav class="main-menu">
+                        <ul class="main-menu__list">
+                            <li class="main-menu__item">
+                                <a href="" class="main-menu__link">Home</a>
+                            </li>
+                            <li class="main-menu__item">
+                                <a
+                                    href="./pages/shop.html"
+                                    class="main-menu__link"
+                                    >Shop</a
+                                >
+                            </li>
+                            <li class="main-menu__item">
+                                <a href="" class="main-menu__link">About</a>
+                            </li>
+                            <li class="main-menu__item">
+                                <a href="" class="main-menu__link">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header-items">
+                        <div class="header-item-user">
+                            <span
+                                ><a href="./sign-up.html"
+                                    ><img src="../assets/icons/1.svg" /></a
+                            ></span>
+                        </div>
+                        <div class="header-item-user">
+                            <span><img src="../assets/icons/2.svg" /></span>
+                        </div>
+                        <div class="header-item-user">
+                            <span><img src="../assets/icons/3.svg" /></span>
+                        </div>
+                        <div class="header-item-user">
+                            <span
+                                ><a href="./cart.html"
+                                    ><img src="../assets/icons/1.svg" /></a
+                            ></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="banner">
+            <img
+                src="https://picsum.photos/id/121/1440/500"
+                alt=""
+                class="banner__img"
+            />
+        </section>
+        <!-- End Header  -->
+        <section class="bill">
+            <div class="container">
+                <div class="billdetail">
+                    <div class="billdetail__detail">
+                        <h3>Billing details</h3>
+                        <div class="billdetail__name">
+                            <div class="__firstname">
+                                <label for="firstname">First Name</label>
+                                <input type="text" id="firstname" />
+                            </div>
+                            <div class="__lastname">
+                                <label for="lastname">Last Name</label>
+                                <input type="text" id="lastname" />
+                            </div>
+                        </div>
+                        <div class="billdetail__company forminput">
+                            <label for="company"
+                                >Company Name ( Optional )</label
+                            >
+                            <input type="text" id="company" />
+                        </div>
+                        <div class="billdetail__country forminput">
+                            <label for="country">Country / Region</label>
+                            <select type="text" id="country">
+                                <option value="">Sri Lanka</option>
+                                <option value="">Sri Lanka</option>
+                                <option value="">Sri Lanka</option>
+                            </select>
+                        </div>
+                        <div class="billdetail__street forminput">
+                            <label for="street">Street address</label>
+                            <input type="text" id="street" />
+                        </div>
+                        <div class="billdetail__city forminput">
+                            <label for="city">Town / City</label>
+                            <input type="text" id="city" />
+                        </div>
+                        <div class="billdetail__province forminput">
+                            <label for="province">Province</label>
+                            <select type="text" id="province">
+                                <option value="">Western Province</option>
+                                <option value="">Western Province</option>
+                                <option value="">Western Province</option>
+                            </select>
+                        </div>
+                        <div class="billdetail__zipcode forminput">
+                            <label for="zipcode">ZIP code</label>
+                            <input type="text" id="zipcode" />
+                        </div>
+                        <div class="billdetail__phone forminput">
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" />
+                        </div>
+                        <div class="billdetail__email forminput">
+                            <label for="email">Email address</label>
+                            <input type="text" id="email" />
+                        </div>
+                        <div class="billdetail__additional forminput">
+                            <label for=""></label>
+                            <input
+                                type="text"
+                                id="additional"
+                                placeholder="Additional information"
+                            />
+                        </div>
+                    </div>
+                    <div class="billdetail__order">
+                        <ul class="billdetail__orderdetail">
+                            <li class="__head orderitem">
+                                <p>Product</p>
+                                <p>Subtotal</p>
+                            </li>
+                            <li class="__product orderitem">
+                                <p>Asgaard sofa x 1</p>
+                                <span>25.000.000đ</span>
+                            </li>
+                            <li class="__subtotal orderitem">
+                                <p>Subtotal</p>
+                                <span>25.000.000đ</span>
+                            </li>
+                            <li class="__total orderitem">
+                                <p>Total</p>
+                                <span>25.000.000đ</span>
+                            </li>
+                        </ul>
+                        <div class="__crossline"></div>
+                        <div class="__banktransfer">
+                            <input
+                                type="radio"
+                                name="paymethod"
+                                id="banktransfer"
+                            />
+                            <label for="banktransfer"
+                                >Direct Bank Transfer</label
+                            >
+                            <p>
+                                Make your payment directly into our bank
+                                account. Please use your Order ID as the payment
+                                reference. Your order will not be shipped until
+                                the funds have cleared in our account.
+                            </p>
+                        </div>
+                        <div class="__cashondelivery">
+                            <input
+                                type="radio"
+                                name="paymethod"
+                                id="cashondelivery"
+                            />
+                            <label for="cashondelivery">
+                                Cash On Delivery
+                            </label>
+                            <p>
+                                Your personal data will be used to support your
+                                experience throughout this website, to manage
+                                access to your account, and for other purposes
+                                described in our
+                                <strong>privacy policy.</strong>
+                            </p>
+                        </div>
+                        <div class="__orderbtn">
+                            <button class="">Place order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <div class="services__item">
+                <img
+                    class="services__imageItem"
+                    src="../assets/icons/10.svg"
+                    alt=""
+                />
+                <div class="sevices__infoItem">
+                    <h4 class="services__name">High Quality</h4>
+                    <span class="services__desc"
+                        >crafted from top materials</span
+                    >
+                </div>
+            </div>
+            <!-- End Service item -->
+            <div class="services__item">
+                <img
+                    class="services__imageItem"
+                    src="../assets/icons/11.svg"
+                    alt=""
+                />
+                <div class="sevices__infoItem">
+                    <h4 class="services__name">Warranty Protection</h4>
+                    <span class="services__desc">Over 2 years</span>
+                </div>
+            </div>
+            <!-- End Service item -->
+            <div class="services__item">
+                <img
+                    class="services__imageItem"
+                    src="../assets/icons/12.svg"
+                    alt=""
+                />
+                <div class="sevices__infoItem">
+                    <h4 class="services__name">Free Shipping</h4>
+                    <span class="services__desc">Order over 150 $</span>
+                </div>
+            </div>
+            <!-- End Service item -->
+            <div class="services__item">
+                <img
+                    class="services__imageItem"
+                    src="../assets/icons/13.svg"
+                    alt=""
+                />
+                <div class="sevices__infoItem">
+                    <h4 class="services__name">24 / 7 Support</h4>
+                    <span class="services__desc">Dedicated support</span>
+                </div>
+            </div>
+            <!-- End Service item -->
+        </section>
+        <!-- End Services  -->
+        <section class="footer">
+            <div class="container">
+                <div class="footer__list">
+                    <ul class="footer__brand">
+                        <li class="footer__brandname">Funiro.</li>
+                        <li class="footer__address">
+                            400 University Drive Suite 200 Coral
+                            <br />Gables,<br />
+                            FL 33134 USA
+                        </li>
+                    </ul>
+                    <ul class="footer__links">
+                        <li class="footer__namelinks">Links</li>
+                        <li class="footer__linksitem"><a href="">Home</a></li>
+                        <li class="footer__linksitem"><a href="">Shop</a></li>
+                        <li class="footer__linksitem"><a href="">About</a></li>
+                        <li class="footer__linksitem">
+                            <a href="">Contact</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__helps">
+                        <li class="footer__namehepls">Helps</li>
+                        <li class="footer__heplsitem">
+                            <a href="">Payment Options</a>
+                        </li>
+                        <li class="footer__heplsitem">
+                            <a href="">Returns</a>
+                        </li>
+                        <li class="footer__heplsitem">
+                            <a href="">Privacy Policies</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__newsletter">
+                        <li class="footer__namenewletter">Newsletter</li>
+                        <li class="footer__subcribe">
+                            <form action="#">
+                                <input
+                                    type="email"
+                                    placeholder="Enter Your Email Address"
+                                />
+                                <button type="submit">SUBSCRIBE</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__license">
+                    <p>2023 furino. All rights reverved</p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
