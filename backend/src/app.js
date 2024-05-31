@@ -18,6 +18,11 @@ app.use(cors());
 app.use(morgan("tiny"));
 
 connectDB(process.env.DB_URI);
+const post = process.env.PORT;
+
+app.listen(post, () => {
+    console.log(`Server is running on port http://localhost:${post}`);
+});
 
 app.use(`/api/v1/`, authRouter);
 app.use(`/api/v1/`, productRouter);
